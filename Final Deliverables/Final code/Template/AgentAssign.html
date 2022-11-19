@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  padding: 28px 0;
+
+justify-content:space-around;
+  background-size: 400% 400%;
+  background-image: linear-gradient(-45deg, #ff5959, #ff4040, #ff0d6e, #ff8033,#d74177);
+  animation: 12s myGradient infinite;
+aligh-items:center;
+  box-shadow: 3px 3px 10px #ff3352;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+@keyframes myGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50%{
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 15px;
+  font-family: verdana;
+  font-weight: lighter;
+  font-size: 24px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  margin-right:70px;
+}
+
+
+
+
+
+
+
+/*Ideal screen pixel 1317px*/
+
+
+
+@keyframes myLineargradient {
+  0% {
+    background-position: 0% 50%;
+    box-shadow: 2px 3px 20px #ff1700;
+  }
+
+  50% {
+    background-position: 100% 50%;
+     box-shadow: none;
+  }
+
+  100% {
+    background-position: 0% 50%;
+     box-shadow: 2px 3px 20px #ff1700;
+  }
+}
+
+    </style>
+</head>
+<body>
+ <div class="html-container">
+        <div class="html-section">
+          <div class="html-project">
+            <div class="navigation">
+              <nav>
+                <ul class="nav-type">
+
+                  <li><a href="/AdminHome">Home</a></li>
+					<li><a href="/NewAgent">NewAgent</a></li>
+					<li><a href="/AdminComplaintInfo">ComplaintInfo</a></li>
+
+
+					<li><a href="/">Logout</a></li>
+
+
+                </ul>
+              </nav>
+
+            </div>
+          </div>
+        </div>
+          <img src="static/images/c1.jpg" alt="" height="700px" width="100%"
+        style="background-color:lightgray;background-size: cover;">
+        </br></br></br>
+
+
+<!-- header -->
+
+
+<!-- //banner -->
+<div class="about all_pad" align="center">
+	<div class="container">
+		<h3 class="title">Assign Agent </h3>
+
+		<form id="form1" name="form1" method="post" action="/ass">
+              <table width="35%" border="0" align="center">
+
+    <tr>
+          <td></td>
+    </tr>
+    <tr>
+      <td width="45%" height="48">AgentId</td>
+      <td width="55%"><select name="agid" id="agid">
+		  {%for item1 in data%}
+	        <option>{{item1[7]}}</option>
+			 {%endfor%}</select>
+      </td>
+    </tr>
+
+
+
+
+
+
+	<tr>
+      <td height="72">&nbsp;</td>
+      <td><input name="btn" type="submit" id="btn" value="Submit" />
+
+    </tr>
+  </table>
+            </form>
+
+	</div>
+</div>
+
+<!-- contact -->
+</br></br></br><footer style="padding:20px;background-color:tomato;">
+          <p style="text-align: center;color:white;">Copyright to plasma donation hub</p>
+        </footer>
+</body>
+</html>
